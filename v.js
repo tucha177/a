@@ -1,7 +1,7 @@
 const dataToSend = {
 };
 
-fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
+fetch('https://affiliates-api.ggpartners.com/api2/upload_config', {
   method: 'POST', // Specify the HTTP method as POST
   headers: {
     'Content-Type': 'application/json' // Indicate the type of data being sent
