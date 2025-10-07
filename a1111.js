@@ -82,10 +82,10 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.withCredentials = true;
     xmlHttp.open( "GET", "https://affiliates-api.ggpartners.com/admin/translate_manager/server_marks", false ); // false for synchronous request
-xmlHttp.setRequestHeader('Access-Control-Allow-Origin: *');
-xmlHttp.setRequestHeader('Access-Control-Allow-Methods: GET, POST, OPTIONS');
-xmlHttp.setRequestHeader('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With, Set-Cookie, Cookie, Bearer');
-xmlHttp.setRequestHeader('Access-Control-Allow-Credentials: true');
+xmlHttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+xmlHttp.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+xmlHttp.setRequestHeader('Access-Control-Allow-Headers', 'Origin, Content-Type, Accept, Authorization, X-Request-With, Set-Cookie, Cookie, Bearer');
+xmlHttp.setRequestHeader('Access-Control-Allow-Credentials', 'true');
     xmlHttp.send( null );
 
 var xmlHttp1 = new XMLHttpRequest();
