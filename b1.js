@@ -1,11 +1,25 @@
 const dataToSend = {
 };
 
+function getCookie(name) {
+  const cookies = document.cookie.split('; ');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i];
+    // Check if the cookie starts with the desired name and an equals sign
+    if (cookie.startsWith(name + '=')) {
+      // Return the value part of the cookie
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null; // Return null if the cookie is not found
+}
+
 fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
   method: 'POST', // Specify the HTTP method as POST
   headers: {
-    'Content-Type': 'application/json' // Indicate the type of data being sent
-  },
+        "XSRF-TOKEN-X": getCookie("XSRF-TOKEN-X"), 
+        "Content-Type": "application/json"
+      },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
 })
 .then(response => {
