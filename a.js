@@ -9,9 +9,6 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
 })
 .then(response => {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
   a = response.json(); // Parse the JSON response from the server
 
   var xmlHttp = new XMLHttpRequest();
