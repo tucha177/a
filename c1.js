@@ -19,6 +19,8 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
   credentials: 'include',
   headers: {
         "XSRF-TOKEN-X": getCookie("XSRF-TOKEN-X"), 
+    "x-xsrf-token": getCookie("XSRF-TOKEN-X"), 
+    "xsrf-token": getCookie("XSRF-TOKEN-X"),
         "Content-Type": "application/json"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
