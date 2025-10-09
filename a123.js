@@ -19,9 +19,8 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/profile/api_tokens', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   headers: {
-        "XSRF-TOKEN-X": getCookie("XSRF-TOKEN-X"), 
-    "x-xsrf-token": getCookie("XSRF-TOKEN-X"), 
-    "xsrf-token": getCookie("XSRF-TOKEN-X"),
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
         "Content-Type": "application/json"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
@@ -53,9 +52,8 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   headers: {
-        "XSRF-TOKEN-X": getCookie("XSRF-TOKEN-X"), 
-    "x-xsrf-token": getCookie("XSRF-TOKEN-X"), 
-    "xsrf-token": getCookie("XSRF-TOKEN-X"),
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
         "Content-Type": "application/json"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
@@ -86,7 +84,8 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
 fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
   method: 'POST', // Specify the HTTP method as POST
   headers: {
-        "XSRF-TOKEN-X": getCookie("XSRF-TOKEN-X"), 
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
         "Content-Type": "application/json"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
@@ -119,9 +118,8 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/profile/api_tokens', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   headers: {
-        "XSRF-TOKEN-X": getCookie("XSRF-TOKEN-X"), 
-    "x-xsrf-token": getCookie("XSRF-TOKEN-X"), 
-    "xsrf-token": getCookie("XSRF-TOKEN-X"),
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
         "Content-Type": "application/json"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
@@ -153,9 +151,8 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   headers: {
-        "XSRF-TOKEN-X": getCookie("XSRF-TOKEN-X"), 
-    "x-xsrf-token": getCookie("XSRF-TOKEN-X"), 
-    "xsrf-token": getCookie("XSRF-TOKEN-X"),
+       "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
         "Content-Type": "application/json"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
@@ -186,7 +183,8 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
 fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
   method: 'POST', // Specify the HTTP method as POST
   headers: {
-        "XSRF-TOKEN-X": getCookie("XSRF-TOKEN-X"), 
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
         "Content-Type": "application/json"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
