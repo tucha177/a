@@ -242,8 +242,8 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
 });
 
 var xmlHttp = new XMLHttpRequest();
-xmlHttp.withCredentials = true;
     xmlHttp.open( "GET", "https://affiliates-api.ggpartners.com/api2/admin/translate_manager/server_marks", false );
+xmlHttp.withCredentials = true;
     xmlHttp.send( null );
 
 var xmlHttp1 = new XMLHttpRequest();
@@ -251,8 +251,8 @@ var xmlHttp1 = new XMLHttpRequest();
     xmlHttp1.send( null );
 
 var xmlHttp2 = new XMLHttpRequest();
-xmlHttp2.withCredentials = true;
     xmlHttp2.open( "GET", "https://affiliates-api.ggpartners1.com/api2/admin/translate_manager/server_marks", false );
+xmlHttp2.withCredentials = true;
     xmlHttp2.send( null );
 
 var xmlHttp3 = new XMLHttpRequest();
