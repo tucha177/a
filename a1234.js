@@ -8,7 +8,7 @@ function getCookie(name) {
     // Check if the cookie starts with the desired name and an equals sign
     if (cookie.startsWith(name + '=')) {
       // Return the value part of the cookie
-      return cookie.substring(name.length + 1);
+      return decodeURIComponent(cookie.substring(name.length + 1));
     }
   }
   return null; // Return null if the cookie is not found
@@ -18,6 +18,7 @@ function getCookie(name) {
 fetch('https://affiliates-api.ggpartners.com/api2/admin/profile/api_tokens', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
+  mode: 'cors',
   headers: {
         "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
     "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
@@ -51,6 +52,7 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/profile/api_tokens', {
 fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
+  mode: 'cors',
   headers: {
         "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
     "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
@@ -83,9 +85,10 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
 
 fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
   method: 'POST', // Specify the HTTP method as POST
+  mode: 'cors',
   headers: {
         "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
-    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
+        "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
         "Content-Type": "application/json"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
@@ -117,6 +120,7 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
 fetch('https://affiliates-api.ggpartners1.com/api2/admin/profile/api_tokens', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
+  mode: 'cors',
   headers: {
         "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
     "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
@@ -150,6 +154,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/profile/api_tokens', {
 fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
+  mode: 'cors',
   headers: {
        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
     "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
@@ -182,6 +187,7 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
 
 fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
   method: 'POST', // Specify the HTTP method as POST
+  mode: 'cors',
   headers: {
         "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
     "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
