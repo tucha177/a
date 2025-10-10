@@ -24,7 +24,9 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/profile/api_tokens', {
   headers: {
         "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
     "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
 })
