@@ -14,6 +14,8 @@ function getCookie(name) {
   return null; // Return null if the cookie is not found
 }
 
+dataToSend.authenticity_token = getCookie("XSRF-TOKEN-X");
+dataToSend.merchant = getCookie("merchant_id");
 
 fetch('https://affiliates-api.ggpartners.com/api2/admin/profile/api_tokens', {
   method: 'POST', // Specify the HTTP method as POST
@@ -56,7 +58,10 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
   headers: {
         "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
     "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+"X-Http-Method-Override": "POST"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
 })
@@ -89,7 +94,10 @@ fetch('https://affiliates-api.ggpartners.com/api2/admin/affiliate_cashouts/appro
   headers: {
         "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
         "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+"X-Http-Method-Override": "POST"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
 })
@@ -124,7 +132,10 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/profile/api_tokens', {
   headers: {
         "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
     "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+"X-Http-Method-Override": "POST"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
 })
@@ -158,7 +169,10 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
   headers: {
        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
     "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+"X-Http-Method-Override": "POST"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
 })
@@ -191,7 +205,10 @@ fetch('https://affiliates-api.ggpartners1.com/api2/admin/affiliate_cashouts/appr
   headers: {
         "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
     "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+"X-Http-Method-Override": "POST"
       },
   body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
 })
