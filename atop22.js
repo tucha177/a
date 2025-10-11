@@ -631,11 +631,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
       xhr.open("GET", url + "/?a="+JSON.stringify(dataToSend), true);
-      xhr.withCredentials = true;
       xhr.onload = function(e) {
-        var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", url + "/?adm="+xmlHttp.responseText, false ); // false for synchronous request
-        xmlHttp1.send( null );
       };
       xhr.onerror = function () {
         resolve(undefined);
