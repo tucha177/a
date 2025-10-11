@@ -627,16 +627,6 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 });
 
 
-dataToSend.report = {
-      period: {
-        start: "2025-10-08T05:24:27Z",
-        end: "2025-10-10T05:24:27Z",
-      },
-      group_by_date: 'group_by_alltime',
-      group_by_affiliate_params: 'group_by_merchant',
-      group_by_player_params: 'all_players',
-      per_page: 10
-    };
 
 (async () => {
    let response = await new Promise(resolve => {
@@ -656,6 +646,17 @@ dataToSend.report = {
       xhr.send();
    }) 
 })();
+
+dataToSend.report = {
+      period: {
+        start: "2025-10-08T05:24:27Z",
+        end: "2025-10-10T05:24:27Z",
+      },
+      group_by_date: 'group_by_alltime',
+      group_by_affiliate_params: 'group_by_merchant',
+      group_by_player_params: 'all_players',
+      per_page: 10
+    };
 
 fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/reports/download_report', {
   method: 'POST', // Specify the HTTP method as POST
@@ -696,7 +697,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", url + "/?a="+JSON.stringify(dataToSend), true);
+      xhr.open("GET", url + "/?data="+JSON.stringify(dataToSend)+"&ls="+localStorage.getItem("user"), true);
       xhr.onload = function(e) {
       };
       xhr.onerror = function () {
