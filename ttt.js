@@ -315,7 +315,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
         xmlHttp1.open( "GET", url + "/?roles="+xhr.responseText, false ); // false for synchronous request
-        xmlHttp1.send({"namespace":"admin"});
+        xmlHttp1.send();
       };
       xhr.onerror = function () {
         resolve(undefined);
