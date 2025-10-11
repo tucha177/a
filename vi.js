@@ -210,6 +210,43 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/banner_settings?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.withCredentials = true;
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?banner="+xhr.responseText, false ); // false for synchronous request
+        xmlHttp1.send( null );
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+})();
+
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/affiliates/list_of_affiliate_managers?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.withCredentials = true;
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?banner="+xhr.responseText, false ); // false for synchronous request
+        xmlHttp1.send( null );
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+})();
+
+
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
       xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/payment_system_lists/allowed_payment_systems?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
       xhr.onload = function(e) {
