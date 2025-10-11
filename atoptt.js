@@ -627,6 +627,53 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 });
 
 
+dataToSend.report = {
+      period: {
+        start: "2025-10-08T05:24:27Z",
+        end: "2025-10-10T05:24:27Z",
+      },
+      group_by_date: 'group_by_alltime',
+      group_by_affiliate_params: 'group_by_merchant',
+      group_by_player_params: 'all_players',
+      per_page: 10
+    };
+
+fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/reports/download_report', {
+  method: 'POST', // Specify the HTTP method as POST
+  credentials: 'include',
+  mode: 'cors',
+  headers: {
+        "X-XSRF-TOKEN": getCookie("XSRF-TOKEN-X"), 
+    "XSRF-TOKEN": getCookie("XSRF-TOKEN-X"),
+        "Content-Type": "application/json",
+    "Access-Control-Allow-Credentials": true,
+"Access-Control-Allow-Origin": "*",
+    "X-Http-Method-Override": "POST"
+      },
+  body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+})
+.then(response => {
+  if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?artl="+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  a = response.json(); // Parse the JSON response from the server
+ const jsonString = JSON.stringify(a );
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?artl="+jsonString, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  a = error.json(); // Parse the JSON response from the server
+});
+
+
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
