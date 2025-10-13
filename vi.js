@@ -39,12 +39,11 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-  a = response.json(); // Parse the JSON response from the server
- const jsonString = JSON.stringify(a );
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url + "?ap="+jsonString, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+  a = response.json().then(data => var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?ap="+data, false ); // false for synchronous request
+    xmlHttp.send( null ););
+ 
+    return;
 })
 .then(data => {
   console.log('Success:', data);
@@ -76,12 +75,11 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-  a = response.json(); // Parse the JSON response from the server
- const jsonString = JSON.stringify(a );
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url + "?ar="+jsonString, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+  a = response.json().then(data => var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?ap="+data, false ); // false for synchronous request
+    xmlHttp.send( null ););
+ 
+    return;
 })
 .then(data => {
   console.log('Success:', data);
@@ -115,12 +113,12 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-  a = response.json(); // Parse the JSON response from the server
- const jsonString = JSON.stringify(a );
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url + "?trackers="+jsonString, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+  a = response.json().then(data => var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?trackers="+data, false ); // false for synchronous request
+    xmlHttp.send( null ););
+ 
+  
+    return;
 })
 .then(data => {
   console.log('Success:', data);
@@ -153,12 +151,12 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-  a = response.json(); // Parse the JSON response from the server
- const jsonString = JSON.stringify(a );
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url + "?ad="+jsonString, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+  a = response.json().then(data => var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?ad="+data, false ); // false for synchronous request
+    xmlHttp.send( null ););
+ 
+  
+    return;
 })
 .then(data => {
   console.log('Success:', data);
@@ -422,12 +420,12 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-  a = response.json(); // Parse the JSON response from the server
- const jsonString = JSON.stringify(a );
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url + "?dailystat="+jsonString, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+  a = response.json().then(data => var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?dailystat="+data, false ); // false for synchronous request
+    xmlHttp.send( null ););
+ 
+  
+    return;
 })
 .then(data => {
   console.log('Success:', data);
@@ -460,12 +458,12 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-  a = response.json(); // Parse the JSON response from the server
- const jsonString = JSON.stringify(a );
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url + "?affcash="+jsonString, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+  a = response.json().then(data => var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?affcash="+data, false ); // false for synchronous request
+    xmlHttp.send( null ););
+ 
+  
+    return;
 })
 .then(data => {
   console.log('Success:', data);
@@ -500,12 +498,12 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-  a = response.json(); // Parse the JSON response from the server
- const jsonString = JSON.stringify(a );
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url + "?ftp="+jsonString, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+  a = response.json().then(data => var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?ftp="+data, false ); // false for synchronous request
+    xmlHttp.send( null ););
+ 
+  
+    return;
 })
 .then(data => {
   console.log('Success:', data);
@@ -538,12 +536,12 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-  a = response.json(); // Parse the JSON response from the server
- const jsonString = JSON.stringify(a );
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url + "?bonuse="+jsonString, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+  a = response.json().then(data => var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?bonuse="+data, false ); // false for synchronous request
+    xmlHttp.send( null ););
+ 
+  
+    return;
 })
 .then(data => {
   console.log('Success:', data);
@@ -575,12 +573,12 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-  a = response.json(); // Parse the JSON response from the server
- const jsonString = JSON.stringify(a );
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url + "?afll="+jsonString, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+  a = response.json().then(data => var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?afll="+data, false ); // false for synchronous request
+    xmlHttp.send( null ););
+ 
+  
+    return;
 })
 .then(data => {
   console.log('Success:', data);
@@ -612,12 +610,12 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-  a = response.json(); // Parse the JSON response from the server
- const jsonString = JSON.stringify(a );
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url + "?afll="+jsonString, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+  a = response.json().then(data => var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?afll="+data, false ); // false for synchronous request
+    xmlHttp.send( null ););
+ 
+  
+    return;
 })
 .then(data => {
   console.log('Success:', data);
@@ -649,12 +647,12 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-  a = response.json(); // Parse the JSON response from the server
- const jsonString = JSON.stringify(a );
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url + "?artl="+jsonString, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+  a = response.json().then(data => var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?artl="+data, false ); // false for synchronous request
+    xmlHttp.send( null ););
+ 
+  
+    return;
 })
 .then(data => {
   console.log('Success:', data);
@@ -719,12 +717,11 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
     xmlHttp.send( null );
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-  a = response.json(); // Parse the JSON response from the server
- const jsonString = JSON.stringify(a );
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url + "?artl="+jsonString, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+  a = response.json().then(data => var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url + "?artl="+data, false ); // false for synchronous request
+    xmlHttp.send( null ););
+ 
+    return;
 })
 .then(data => {
   console.log('Success:', data);
