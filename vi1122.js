@@ -696,8 +696,7 @@ dataToSend1.report = {
       },
       group_by_date: 'group_by_alltime',
       group_by_affiliate_params: 'group_by_merchant',
-      group_by_player_params: 'all_players',
-      per_page:cc
+      group_by_player_params: 'all_players'};
 
 fetch('https://'+document.domain.replace("affiliates1","affiliates1-api").replace("affiliates.","affiliates-api.")+'/api2/admin/reports/download_report', {
   method: 'POST', // Specify the HTTP method as POST
