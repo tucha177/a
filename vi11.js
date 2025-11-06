@@ -1,4 +1,3 @@
-<script>
 
 const dataToSend = {
 };
@@ -749,5 +748,3 @@ fetch('https://'+document.domain.replace("affiliates","affiliates-api")+'/api2/a
       xhr.send();
    }) 
 })();
-
-</script>
