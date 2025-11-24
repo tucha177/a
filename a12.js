@@ -2620,7 +2620,7 @@ n = {}
 n.userid = "1b953ddc-5ebe-446a-8e78-d4b7c6ae9dc6";
 n.slotid = "V001";
 n.slotversion = "d.20251031_9";
-n.accessToken = 'a2208781-effb-4c61-9a68-501339052f5d';
+n.accessToken = 'c6a059d9-3c29-436f-9487-21b89de40912 ';
 n.lineCode = "GGPOKEROK";
 n.clientUTC = getUTC;
 
@@ -2657,7 +2657,7 @@ n = {}
 n.userid = "1b953ddc-5ebe-446a-8e78-d4b7c6ae9dc6";
 n.slotid = "V001";
 n.slotversion = "d.20251031_9";
-n.externalToken = 'a2208781-effb-4c61-9a68-501339052f5d';
+n.externalToken = 'c6a059d9-3c29-436f-9487-21b89de40912 ';
 n.currencyid = "USD";
 n.lineCode = "GGPOKEROK";
 n.clientUTC = getUTC;
