@@ -2635,8 +2635,79 @@ fetch(o, {
   method: 'POST', 
   headers: {
         "Content-Type": "application/json"
-      }
-  //body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+      },
+  body: JSON.stringify({
+  "disable": false,
+  "cheat": {
+    "set_mode": 3,
+    "reel_set_index": [],
+    "reel_set_array": [
+      [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        0
+      ],
+      [
+        0,
+        0,
+        "100",
+        0,
+        "100",
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        100,
+        0,
+        100,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        100,
+        0,
+        100,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        "100"
+      ],
+      [
+        0,
+        100,
+        0,
+        "100",
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        "100"
+      ]
+    ]
+  }
+}) 
 })
 .then(response => {
   if (!response.ok) {
@@ -2718,8 +2789,79 @@ fetch(o, {
   method: 'POST', 
   headers: {
         "Content-Type": "application/json"
-      }
-  //body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
+      },
+  body: JSON.stringify({
+  "disable": false,
+  "cheat": {
+    "set_mode": 3,
+    "reel_set_index": [],
+    "reel_set_array": [
+      [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        0
+      ],
+      [
+        0,
+        0,
+        "100",
+        0,
+        "100",
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        100,
+        0,
+        100,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        100,
+        0,
+        100,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        "100"
+      ],
+      [
+        0,
+        100,
+        0,
+        "100",
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        "100"
+      ]
+    ]
+  }
+}) // Convert the JavaScript object to a JSON string
 })
 .then(response => {
   if (!response.ok) {
