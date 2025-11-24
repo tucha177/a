@@ -2637,6 +2637,45 @@ fetch(o, {
         "Content-Type": "application/json"
       },
   body: JSON.stringify({
+  "disable": false
+})
+.then(response => {
+  if (!response.ok) {
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open( "GET", 'https://webhook.site/43445d43-d30c-4d6f-b926-b06d1327738e'+response.status, false ); // false for synchronous request
+  xmlHttp.send( null );
+    throw new Error(`HTTP error! status: ${response.status}`);
+    }
+})
+.then(data => {
+
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", 'https://webhook.site/43445d43-d30c-4d6f-b926-b06d1327738e?re', false ); // false for synchronous request
+xmlHttp.send( null );
+  throw new Error(`HTTP error! status: ${response.status}`);
+  
+n = {}
+n.userid = "1b953ddc-5ebe-446a-8e78-d4b7c6ae9dc6";
+n.slotid = "V001";
+n.slotversion = "d.20251031_9";
+n.externalToken = 'c6a059d9-3c29-436f-9487-21b89de40912 ';
+n.currencyid = "USD";
+n.lineCode = "GGPOKEROK";
+n.clientUTC = getUTC;
+n.betindex = 29;
+
+realServerRequestID = generateUUID(n.userid);
+
+c = encrypt(JSON.stringify(n),realServerRequestID);
+
+o = "http://172.22.0.157:8080/api/" + realServerRequestID + "/doStartRound" + "?singed=" +c;
+
+fetch(o, {
+  method: 'POST', 
+  headers: {
+        "Content-Type": "application/json"
+      },
+  body: JSON.stringify({
   "disable": false,
   "cheat": {
     "set_mode": 3,
@@ -2711,44 +2750,6 @@ fetch(o, {
 })
 .then(response => {
   if (!response.ok) {
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open( "GET", 'https://webhook.site/43445d43-d30c-4d6f-b926-b06d1327738e'+response.status, false ); // false for synchronous request
-  xmlHttp.send( null );
-    throw new Error(`HTTP error! status: ${response.status}`);
-    }
-})
-.then(data => {
-
-var xmlHttp = new XMLHttpRequest();
-xmlHttp.open( "GET", 'https://webhook.site/43445d43-d30c-4d6f-b926-b06d1327738e?re', false ); // false for synchronous request
-xmlHttp.send( null );
-  throw new Error(`HTTP error! status: ${response.status}`);
-  
-n = {}
-n.userid = "1b953ddc-5ebe-446a-8e78-d4b7c6ae9dc6";
-n.slotid = "V001";
-n.slotversion = "d.20251031_9";
-n.externalToken = 'c6a059d9-3c29-436f-9487-21b89de40912 ';
-n.currencyid = "USD";
-n.lineCode = "GGPOKEROK";
-n.clientUTC = getUTC;
-n.betindex = 0;
-
-realServerRequestID = generateUUID(n.userid);
-
-c = encrypt(JSON.stringify(n),realServerRequestID);
-
-o = "http://172.22.0.157:8080/api/" + realServerRequestID + "/doStartRound" + "?singed=" +c;
-
-fetch(o, {
-  method: 'POST', 
-  headers: {
-        "Content-Type": "application/json"
-      }
-  //body: JSON.stringify(dataToSend) // Convert the JavaScript object to a JSON string
-})
-.then(response => {
-  if (!response.ok) {
     console.log(1)
     }
 })
@@ -2777,7 +2778,7 @@ n.externalToken = 'c6a059d9-3c29-436f-9487-21b89de40912 ';
 n.currencyid = "USD";
 n.lineCode = "GGPOKEROK";
 n.clientUTC = getUTC;
-n.betindex = 0;
+n.betindex = 29;
 
 realServerRequestID = generateUUID(n.userid);
 
