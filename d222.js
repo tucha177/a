@@ -2621,7 +2621,7 @@ bii = function() {
   n.userid = "1b953ddc-5ebe-446a-8e78-d4b7c6ae9dc6";
   n.slotid = "V001";
   n.slotversion = "d.20251031_9";
-  n.externalToken = '4e9dc3e0-57cd-483b-a8d0-e489f6fc1ff8';
+  n.externalToken = '408cbcdc-3519-4513-84e7-7d3ebc9253c2';
   n.currencyid = "USD";
   n.lineCode = "GGPOKEROK";
   n.clientUTC = getUTC;
@@ -2731,7 +2731,7 @@ f = function ()
   n.userid = "1b953ddc-5ebe-446a-8e78-d4b7c6ae9dc6";
   n.slotid = "V001";
   n.slotversion = "d.20251031_9";
-  n.accessToken = '4e9dc3e0-57cd-483b-a8d0-e489f6fc1ff8';
+  n.accessToken = '408cbcdc-3519-4513-84e7-7d3ebc9253c2';
   n.lineCode = "GGPOKEROK";
   n.clientUTC = getUTC;
 
