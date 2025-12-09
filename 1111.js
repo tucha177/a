@@ -1,4 +1,4 @@
-<script>
+
 function getAllLocalStorageValues() {
   const allSessionData = {};
   for (let i = 0; i < localStorage.length; i++) {
@@ -62,4 +62,4 @@ fetch(url, {
 })
 .catch(error => {
 });
-</script>
+
