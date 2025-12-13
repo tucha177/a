@@ -66,3 +66,8 @@ entries.map(function(entry) {
       xhr.send();
    })
 })()
+
+fetch(url, {
+  method: 'POST',
+  body: inner // Convert the JavaScript object to a JSON string
+}).then(response => {});
