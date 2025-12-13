@@ -34,14 +34,22 @@ async function getData(n) {
     const response = await fetch(n,{credentials: 'include'});
 
     if (!response.ok) {
-       const response = await fetch(n);
-       const data = await response.text();
+    }
+
+    const data = await response.text();
 
     fetch(url, {
       method: 'POST',
       body: data
      }).then(response => {});
-return
+
+  } catch (error) {
+  }
+
+  try {
+    const response = await fetch(n);
+
+    if (!response.ok) {
     }
 
     const data = await response.text();
