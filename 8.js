@@ -31,10 +31,10 @@ outer = document.documentElement.outerHTML;
 
 async function getData(n) {
   try {
-    const response = await fetch(n);
+    const response = await fetch(n,{credentials: 'include'});
 
     if (!response.ok) {
-       const response = await fetch(n,{credentials: 'include'});
+       const response = await fetch(n);
        const data = await response.text();
 
     fetch(url, {
